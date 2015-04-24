@@ -5,7 +5,7 @@ Summary: 	multi-vendor login tool, forked from RANCID
 
 Group:          Applications/Internet
 License:        BSD
-URL:            https://github.com/dwcarder/clogin2
+URL:            https://github.com/elleplato/clogin2
 Source0:        %{name}-%{version}.tar.gz
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch: 	noarch

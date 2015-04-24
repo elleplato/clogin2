@@ -7,6 +7,7 @@ We forked clogin from RANCID internally around the year 2001, and hacked it up t
 This is used as the primary login tool for almost all automated configuration of network devices at UW.  At this point, some amount of that logic is based on the DNS naming convention used, but that could probably be fixed easily by hacking the script, or someday with the addition of a config file.
 
 ## Things we know that work with clogin2:
+* Aruba Controllers
 * Juniper JunOS
 * Cisco IOS-XR
 * Cisco NX-OS
