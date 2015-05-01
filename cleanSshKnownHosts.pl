@@ -2,7 +2,7 @@
 
 #==================================================================
 # cleanSshKnownHosts.pl, a tool to remove and log changed ssh host keys
-# Elle Janet Plato, 2015-04-20
+# Elle Janet Plato, 2015-04-20 University of Wisconsin, Madison
 # Maintained by the NS Application/AANTS Team
 #==================================================================
 
@@ -38,6 +38,14 @@ my $keyGen = '/usr/bin/ssh-keygen';
 
 if (defined($debug)) {
     slog(7,"cleanSshKnownHosts.pl invoked by [$user]\n");
+}
+
+if (!defined $ENV{'HOME'}) {
+  slog(7,"User HOME directory undefined, unable to clean known_hosts.");
+  exit;
+} elsif ($ENV{'HOME'} !~ m/^\/home\//) {
+  slog(7,"User HOME directory [$ENV{'HOME'}] must begin with /home/, unable to clean known_hosts.");
+  exit;
 }
 
 #--- untaint device
